@@ -1,6 +1,16 @@
 package com.simple.basicbootswaginmem.db;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Users")
 public class User {
+     User(){
+         super();
+     }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long  id;
     private String name;
     private int   age;
